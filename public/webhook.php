@@ -22,6 +22,7 @@ try {
         $_SERVER['HTTP_X_PATREON_SIGNATURE'] ?? ''
     );
 } catch (\Squid\Patreon\Exceptions\SignatureVerificationFailed $e) {
+    error_log($e->getMessage() . "\n", 3, LOG);
     die('Error: ' . $e->getMessage());
 }
 
@@ -64,5 +65,7 @@ if ($_SERVER['HTTP_X_PATREON_EVENT'] === 'pledges:delete') {
 
     file_put_contents(DATABASE, json_encode($data, JSON_PRETTY_PRINT));
 }
+
+error_log("An {$_SERVER['HTTP_X_PATREON_EVENT']} event has been processed\n", 3, LOG);
 
 echo 'Webhook received and processed.';
