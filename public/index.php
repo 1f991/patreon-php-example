@@ -18,7 +18,7 @@ if (! file_exists(DATABASE) || isset($_GET['refresh'])) {
   // Loop through each of the pledges and convert it into an array containing
   // just the values we need to display below.
   $patrons = $campaign->pledges->mapWithKeys(function ($pledge) {
-      return [$pledge->id => [
+      return [$pledge->patron->id => [
           'name' => $pledge->patron->full_name,
           'picture' => $pledge->patron->image_url,
           'per_payment' => number_format($pledge->amount_cents / 100, 2),
@@ -60,6 +60,7 @@ $campaign = json_decode(file_get_contents(DATABASE));
       .measure { max-width: 50em; }
       a { font-weight: bold; color: #052D49; }
       a:hover { color: #F96854; }
+      .purple { color: purple; }
     </style>
   </head>
   <body>
@@ -90,7 +91,8 @@ $campaign = json_decode(file_get_contents(DATABASE));
         <div class="patron">
           <img src="<?php echo $patron->picture; ?>"/>
           <div class="about">
-            <span class="name">
+            <?php if ($patron->reward == "Emoji") { echo '&#x1f991;'; } ?>
+            <span class="name <?php if ($patron->reward == "Purple Name") { echo 'purple'; } ?>">
               <?php echo $patron->name; ?>
             </span> — $<?php echo $patron->per_payment; ?>
           </div>

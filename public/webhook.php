@@ -37,7 +37,7 @@ $pledge = $pledges->first();
 if (in_array($_SERVER['HTTP_X_PATREON_EVENT'], ['pledges:create', 'pledges:update'])) {
     $data = json_decode(file_get_contents(DATABASE), true);
 
-    $data['patrons'][$pledge->id] = [
+    $data['patrons'][$pledge->patron->id] = [
         'name' => $pledge->patron->full_name,
         'picture' => $pledge->patron->image_url,
         'per_payment' => number_format($pledge->amount_cents / 100, 2),
@@ -58,7 +58,7 @@ if ($_SERVER['HTTP_X_PATREON_EVENT'] === 'pledges:delete') {
     // with the same ID sent to us by Patreon then we delete that Patron from
     // the data.
     foreach ($data['patrons'] as $id => $patron) {
-        if ($id === $pledge->id) {
+        if ($id === $pledge->patron->id) {
             unset($data['patrons'][$id]);
         }
     }
@@ -66,6 +66,6 @@ if ($_SERVER['HTTP_X_PATREON_EVENT'] === 'pledges:delete') {
     file_put_contents(DATABASE, json_encode($data, JSON_PRETTY_PRINT));
 }
 
-error_log("An {$_SERVER['HTTP_X_PATREON_EVENT']} event has been processed\n", 3, LOG);
+error_log("A {$_SERVER['HTTP_X_PATREON_EVENT']} event has been processed\n", 3, LOG);
 
 echo 'Webhook received and processed.';
