@@ -11,9 +11,10 @@ below to set up this example with your own Campaign.
 
 ## Requirements
 
-* A Web Server (such as [Wamp](http://www.wampserver.com/en/)) or [MAMP](https://www.mamp.info/en/) if you're developing on your own computer)
+* A Web Server (such as [Wamp](http://www.wampserver.com/en/) or [MAMP](https://www.mamp.info/en/) if you're developing on your own computer)
 * PHP >=7.2.0
-* A [Patreon Campaign](https://patreon.com)
+* [Composer](https://getcomposer.org/download/)
+* A [Patreon](https://patreon.com) Campaign
 
 ## Getting Started
 
@@ -23,7 +24,7 @@ First you will need to create a Patreon API Client to obtain a Patreon
 `Creator's Access Token`.
 
 1. Visit [`Clients & API Keys`](https://www.patreon.com/portal/registration/register-clients)
-  in the Patreon Platform Portal.
+  in the Patreon Platform Portal
 2. Click `Create Client`
 3. Fill out the fields and save — you don't need to enter real data
 4. After your client is created you'll find your `Creator's Access Token` by
@@ -40,7 +41,7 @@ First you will need to create a Patreon API Client to obtain a Patreon
 git clone https://github.com/1f991/patreon-php-example patreon
 ```
 
-3. Move into the `patreon` directory:
+3. Change into the `patreon` directory:
 
 ```bash
 cd patreon
