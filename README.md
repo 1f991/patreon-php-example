@@ -30,8 +30,6 @@ First you will need to create a Patreon API Client to obtain a Patreon
 4. After your client is created you'll find your `Creator's Access Token` by
   clicking the arrow next to your Client
 
-[ TODO: Add a gif here... ]
-
 ### Install Example Project
 
 1. Open your terminal
@@ -60,11 +58,9 @@ PATREON_ACCESS_TOKEN="your-creators-access-token-here"
 PATREON_WEBHOOK_SECRET=""
 ```
 
-[ TODO: Add a gif here... ]
+![Cloning Demo](https://1f991.github.io/patreon-php-example/patreon-php-example-clone.gif)
 
 You're now ready to visit your new Patreon PHP powered website!
-
-[ TODO: Add a gif here... ]
 
 ### Setting up Webhooks
 
@@ -98,8 +94,6 @@ the local database.
 3. Visit your website again, you should see a new pledge!
 4. Next to the `Delete Pledge` event click `Send Test` (and then `Send Test` again)
 5. Visit your website again, the test pledge is gone!
-
-[ TODO: Add a gif here... ]
 
 That's it. You're done. You now have a Patreon Platform connected website
 created using Patreon PHP.
