@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "06f6ca9dceb542cd236ef9ca12f7abbf",
+    "content-hash": "8cd526a3f5f81796596cc5bbfa89b4b7",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -641,16 +641,16 @@
         },
         {
             "name": "squid/patreon",
-            "version": "1.0.0-alpha1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/1f991/patreon-php.git",
-                "reference": "8ad64aa78aec402cd6a2a96f9a6128083870268f"
+                "reference": "02407d5768bcfcfb3116252721b69d0a2eab37a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/1f991/patreon-php/zipball/8ad64aa78aec402cd6a2a96f9a6128083870268f",
-                "reference": "8ad64aa78aec402cd6a2a96f9a6128083870268f",
+                "url": "https://api.github.com/repos/1f991/patreon-php/zipball/02407d5768bcfcfb3116252721b69d0a2eab37a6",
+                "reference": "02407d5768bcfcfb3116252721b69d0a2eab37a6",
                 "shasum": ""
             },
             "require": {
@@ -691,7 +691,7 @@
             "keywords": [
                 "patreon"
             ],
-            "time": "2018-04-13T23:02:41+00:00"
+            "time": "2018-04-14T21:43:56+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1033,9 +1033,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "alpha",
-    "stability-flags": {
-        "squid/patreon": 15
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
