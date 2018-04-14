@@ -1,0 +1,23 @@
+{
+    "name": "sam/patreon-php-example",
+    "description": "An example project using 1f991/patreon-php",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "alpha",
+    "authors": [
+        {
+            "name": "Samuel Ryan",
+            "email": "sryan@1f991.com"
+        }
+    ],
+    "require": {
+        "squid/patreon": "^1.0@alpha",
+        "php-http/guzzle6-adapter": "^1.1",
+        "vlucas/phpdotenv": "^2.4"
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    }
+}
