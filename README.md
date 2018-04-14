@@ -88,15 +88,14 @@ You're all set! Patreon will now notify your website every time there's a new
 pledge, a pledge is deleted or a pledge is updated, and your website will update
 the local database.
 
+You can test out your webhook integration with the helpful Patreon event tests.
+
 1. Next to the `Create Pledge` event click `Send test`
 2. Click `Send Test` again — you should see Patreon display `Test Response ---
   Status code: 200`
 3. Visit your website again, you should see a new pledge!
 4. Next to the `Delete Pledge` event click `Send Test` (and then `Send Test` again)
 5. Visit your website again, the test pledge is gone!
-
-That's it. You're done. You now have a Patreon Platform connected website
-created using Patreon PHP.
 
 ## Help
 
