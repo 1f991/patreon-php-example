@@ -15,11 +15,15 @@ $patreon = new Patreon(getenv('PATREON_ACCESS_TOKEN'));
 // SignatureVerificationFailed Exception will be thrown which will stop the
 // processing. This prevents any misuse from people who might discover the
 // address of your Webhook URL.
-$pledges = $patreon->webhook()->accept(
-    file_get_contents('php://input'),
-    getenv('PATREON_WEBHOOK_SECRET'),
-    $_SERVER['HTTP_X_PATREON_SIGNATURE']
-);
+try {
+    $pledges = $patreon->webhook()->accept(
+        file_get_contents('php://input'),
+        getenv('PATREON_WEBHOOK_SECRET'),
+        $_SERVER['HTTP_X_PATREON_SIGNATURE'] ?? ''
+    );
+} catch (\Squid\Patreon\Exceptions\SignatureVerificationFailed $e) {
+    die('Error: ' . $e->getMessage());
+}
 
 // A webhook can include many pledges at once but we're just interested in one
 // so we populate $pledge with the first pledge from $pledges.
