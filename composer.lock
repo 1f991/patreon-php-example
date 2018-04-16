@@ -756,16 +756,16 @@
         },
         {
             "name": "squid/patreon",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/1f991/patreon-php.git",
-                "reference": "02407d5768bcfcfb3116252721b69d0a2eab37a6"
+                "reference": "5407f5aa6e522e54b2935c828e135fa351bc6d20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/1f991/patreon-php/zipball/02407d5768bcfcfb3116252721b69d0a2eab37a6",
-                "reference": "02407d5768bcfcfb3116252721b69d0a2eab37a6",
+                "url": "https://api.github.com/repos/1f991/patreon-php/zipball/5407f5aa6e522e54b2935c828e135fa351bc6d20",
+                "reference": "5407f5aa6e522e54b2935c828e135fa351bc6d20",
                 "shasum": ""
             },
             "require": {
@@ -806,7 +806,7 @@
             "keywords": [
                 "patreon"
             ],
-            "time": "2018-04-14T21:43:56+00:00"
+            "time": "2018-04-16T20:07:14+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
