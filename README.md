@@ -55,12 +55,36 @@ composer install
 
 ```bash
 PATREON_ACCESS_TOKEN="your-creators-access-token-here"
-PATREON_WEBHOOK_SECRET=""
 ```
 
 ![Cloning Demo](https://1f991.github.io/patreon-php-example/patreon-php-example-clone.gif)
 
-You're now ready to visit your new Patreon PHP powered website!
+You're now ready to visit your new Patreon PHP example website!
+
+### Accepting Logins
+
+You will need your Patreon API Client's `Client ID`, `Client Secret` and a
+Redirect URI to enable OAuth log ins.
+
+1. Return to  [`Clients & API Keys`](https://www.patreon.com/portal/registration/register-clients)
+  in the Patreon Platform Portal
+2. Click "Edit Client" and in `Redirect URIs` add the address to your Patreon
+  PHP example website with `/login.php` at the end. For example if your website
+  is `patreon.localhost` you would enter `http://patreon.localhost/login.php`
+3. Click "Update Client"
+4. Copy and paste the `Client ID`, `Client Secret` and `Redirect URI` values
+  into your `.env` file, for example:
+
+```bash
+PATREON_ACCESS_TOKEN="your-creators-access-token-here"
+PATREON_WEBHOOK_SECRET=""
+PATREON_CLIENT_ID="your-client-id-here"
+PATREON_CLIENT_SECRET="your-client-secret-here"
+PATREON_REDIRECT_URI="http://patreon.localhost/login.php"
+```
+
+Visit your Patreon PHP example website again and click "log in if you're already
+a patron →" to confirm everything is working as expected.
 
 ### Setting up Webhooks
 
@@ -101,3 +125,10 @@ You can test out your webhook integration with the helpful Patreon event tests.
 
 Please visit the [Patreon Developers forum](https://patreondevelopers.com) for
 any support.
+
+## Security Vulnerabilities
+
+Please reach out to Samuel Ryan via email (sryan@1f991.com) to report any security
+concerns you may have with this example project. Although this project
+is intended as an example, it is probable some of the code will be copy and pasted
+into production, therefore it is important the example code be free of vulnerabilities. Acknowledgement will be provided within 24 hours.

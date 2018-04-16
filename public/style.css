@@ -1,0 +1,65 @@
+body {
+	font-family: monospace;
+	font-size: 16px;
+	padding: 0px;
+	margin: 0px;
+	line-height: 1.5;
+}
+a {
+	font-weight: bold;
+	color: #052D49;
+}
+a:hover {
+	color: #F96854;
+}
+.coral {
+	color: #F96854;
+}
+.navy {
+	color: #052D49;
+}
+.white {
+	color: #f7f8fa;
+}
+.bg-coral {
+	background-color: #F96854;
+}
+.bg-coral a, .bg-coral:hover {
+  color: #fff;
+}
+.bg-yellow {
+	background-color: #fbf1a9;
+}
+.pad {
+	padding: 20px 40px;
+}
+.nm {
+	margin: 0;
+}
+.fade:hover {
+	opacity: 0.8;
+}
+.banner {
+	padding: 10px 40px;
+	font-size: 14px;
+}
+.patron {
+	display: inline-block;
+	width: 200px;
+	margin-bottom: 10px;
+}
+.patron img {
+	width: 200px;
+}
+.patron .about {
+	margin-top: 8px;
+}
+.patron .name {
+	font-weight: bold;
+}
+.measure {
+	max-width: 50em;
+}
+.purple {
+	color: purple;
+}
