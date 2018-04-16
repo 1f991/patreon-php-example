@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "squid/patreon": "~1.0",
+        "squid/patreon": "^1.0",
         "php-http/guzzle6-adapter": "^1.1",
         "vlucas/phpdotenv": "^2.4",
         "league/oauth2-client": "^2.3",
