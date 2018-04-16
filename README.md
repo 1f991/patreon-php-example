@@ -83,6 +83,11 @@ PATREON_CLIENT_SECRET="your-client-secret-here"
 PATREON_REDIRECT_URI="http://patreon.localhost/login.php"
 ```
 
+> ⚠ Do not log in to your Patreon PHP website with your creator account. You
+must create a new account for testing. If you log in with your creator account
+then your `Creator's Access Token` will be reset and all requests will fail.
+When that happens you will need to repeat step 4 again. via [patreondevelopers.com](https://www.patreondevelopers.com/t/118/2).
+
 Visit your Patreon PHP example website again and click "log in if you're already
 a patron →" to confirm everything is working as expected.
 
