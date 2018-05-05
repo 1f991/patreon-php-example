@@ -40,13 +40,13 @@ $campaign = $campaign->campaigns()->getMyCampaign();
       <p>
         You are a patron of my campaign, thank you, that means everybody can
         see your picture when they visit this website! You have spent a total of
-        $<?php echo $me->getPledge()->getTotalSpent(); ?> as my patron.
+        $<?php echo $me->pledge->getTotalSpent(); ?> as my patron.
       </p>
       <!-- If the user has a reward -->
-      <?php if ($me->getPledge()->hasReward()) { ?>
+      <?php if ($me->pledge->hasReward()) { ?>
         <p>
-          You have chosen to receive the <?php echo $me->getPledge()->reward->title; ?>
-          reward, which has been chosen by <?php echo $me->getPledge()->reward->patron_count; ?>
+          You have chosen to receive the <?php echo $me->pledge->reward->title; ?>
+          reward, which has been chosen by <?php echo $me->pledge->reward->patron_count; ?>
           patrons.
         </p>
       <!-- Else, the user does not have a reward -->
